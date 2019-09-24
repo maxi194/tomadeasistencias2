@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+    //Como ejecuto los tests de las clases?
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

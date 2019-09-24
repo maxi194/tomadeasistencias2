@@ -63,7 +63,7 @@ public class AccesoSistema extends Activity {
 
 
     //Aca tengo el error. Como puedo hacer el metodo getRol? Necesito iterar en la lista?
-    
+
     /*public Rol getRol (Rol rol){
 
  Rol roll;
