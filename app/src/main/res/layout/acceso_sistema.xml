@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nomusu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar Usuario" />
+
+    <EditText
+        android:id="@+id/usua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/contra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar Contraseña" />
+
+    <EditText
+        android:id="@+id/clave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/aceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesion" />
+
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atras" />
+</LinearLayout>
