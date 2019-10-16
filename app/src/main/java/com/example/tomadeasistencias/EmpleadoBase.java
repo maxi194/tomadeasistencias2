@@ -22,6 +22,18 @@ private List <AccesoSistema> accesoSistemas;
         Legajo = legajo;
     }
 
+    public void addAccesoSistemas (AccesoSistema accesoSistema){
+
+        accesoSistemas.add(accesoSistema);
+    }
+
+    public List <AccesoSistema> getAllAccesoSistema (AccesoSistema accesoSistema){
+
+        return  accesoSistemas;
+    }
+
+
+
     @Override
     public String toString() {
         return "EmpleadoBase{" +

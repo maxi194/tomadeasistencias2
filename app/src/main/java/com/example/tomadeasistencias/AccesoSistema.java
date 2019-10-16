@@ -23,14 +23,16 @@ public class AccesoSistema extends Activity {
     private String Usuario;
     private String Contraseña;
     private Date Fecha_Hora;
-    private List <Rol> roles;
+    private Rol rol;
 
-    public AccesoSistema(String usuario, String contraseña, Date fecha_Hora, List<Rol> roles) {
+    public AccesoSistema(String usuario, String contraseña, Date fecha_Hora, Rol rol) {
         this.Usuario = usuario;
         this.Contraseña = contraseña;
         this.Fecha_Hora = fecha_Hora;
-        this.roles = roles;
+        this.rol = rol;
     }
+
+
 
     public String getUsuario() {
         return Usuario;
@@ -56,31 +58,13 @@ public class AccesoSistema extends Activity {
         Fecha_Hora = fecha_Hora;
     }
 
-    public void addRol (Rol rol){
-
-        roles.add(rol);
+    public Rol getRol() {
+        return rol;
     }
 
-
-    //Aca tengo el error. Como puedo hacer el metodo getRol? Necesito iterar en la lista?
-
-    /*public Rol getRol (Rol rol){
-
- Rol roll;
-
-        for (Rol rol1 : getAllRoles(this.roles))
-              {
-if(roll
-
-              }
-
-    }*/
-
-    public List<Rol> getAllRoles (List <Rol> roles){
-
-        return roles;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,14 +74,13 @@ if(roll
 
     }
 
-
-
     @Override
     public String toString() {
         return "AccesoSistema{" +
                 "Usuario='" + Usuario + '\'' +
                 ", Contraseña='" + Contraseña + '\'' +
                 ", Fecha_Hora=" + Fecha_Hora +
+                ", rol=" + rol +
                 '}';
     }
 }
