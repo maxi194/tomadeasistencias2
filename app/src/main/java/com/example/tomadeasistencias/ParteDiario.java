@@ -1,22 +1,23 @@
 package com.example.tomadeasistencias;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 public class ParteDiario {
 
     private Date Fecha;
     private String Detalle;
     private String Observaciones;
-    private List<Inasistencia> inasistencias;
     private Curso curso;
+    private ArrayList<Inasistencia> inasistencias;
 
-    public ParteDiario(Date fecha, String detalle, String observaciones, List<Inasistencia> inasistencias, Curso curso) {
+    public ParteDiario(Date fecha, String detalle, String observaciones, Curso curso) {
         this.Fecha = fecha;
         this.Detalle = detalle;
         this.Observaciones = observaciones;
-        this.inasistencias = inasistencias;
         this.curso = curso;
+        inasistencias = new ArrayList<Inasistencia>();
     }
 
     public Date getFecha() {
@@ -56,8 +57,7 @@ public class ParteDiario {
         inasistencias.add(inasistencia);
     }
 
-    public List<Inasistencia> getAllInasistencias(List<Inasistencia> inasistencias){
-
+    public ArrayList<Inasistencia> getAllInasistencias(){
         return inasistencias;
     }
 

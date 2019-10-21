@@ -1,16 +1,17 @@
 package com.example.tomadeasistencias;
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 public class ControlInasistencias {
 
    private Integer Ciclo;
-   private List<ParteDiario> partesDiarios;
+   private ArrayList<ParteDiario> partesDiarios;
 
 
-    public ControlInasistencias(Integer ciclo, List<ParteDiario> partesDiariosrio) {
+    public ControlInasistencias(Integer ciclo){
         this.Ciclo = ciclo;
-        this.partesDiarios = partesDiarios;
+        partesDiarios = new ArrayList<ParteDiario>();
     }
 
     public Integer getCiclo() {
@@ -31,9 +32,9 @@ public class ControlInasistencias {
         this.partesDiarios.remove(partesDiarios);
     }
 
-    public List <ParteDiario> getAllPartesDiarios (ParteDiario partesDiarios){
+    public ArrayList <ParteDiario> getAllPartesDiarios (){
 
-        return this.partesDiarios;
+        return partesDiarios;
     }
 
 

@@ -1,18 +1,24 @@
 package com.example.tomadeasistencias;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 public class EmpleadoBase extends PersonaBase {
 
 private String Legajo;
-private List <AccesoSistema> accesoSistemas;
+private ArrayList <AccesoSistema> accesoSistemas;
+private ArrayList <Telefono> telefonos;
 
-    public EmpleadoBase(String apellido, String nombre, String dni, Date fechaNacimiento, String correoElectronico, Direccion direccion, Nacionalidad nacionalidad, List<Telefono> telefonos, String legajo, List<AccesoSistema> accesoSistemas) {
-        super(apellido, nombre, dni, fechaNacimiento, correoElectronico, direccion, nacionalidad, telefonos);
+    public EmpleadoBase(String apellido, String nombre, String dni, Date fechaNacimiento, String correoElectronico, Direccion direccion, Nacionalidad nacionalidad, String legajo) {
+        super(apellido, nombre, dni, fechaNacimiento, correoElectronico, direccion, nacionalidad);
         this.Legajo = legajo;
-        this.accesoSistemas = accesoSistemas;
+        accesoSistemas = new ArrayList<AccesoSistema>();
+        telefonos = new ArrayList<Telefono>();
+
     }
+
+
 
     public String getLegajo() {
         return Legajo;
@@ -27,10 +33,13 @@ private List <AccesoSistema> accesoSistemas;
         accesoSistemas.add(accesoSistema);
     }
 
-    public List <AccesoSistema> getAllAccesoSistema (AccesoSistema accesoSistema){
+    public ArrayList <AccesoSistema> getAllAccesoSistema (){
 
-        return  accesoSistemas;
+        return accesoSistemas;
     }
+
+
+
 
 
 

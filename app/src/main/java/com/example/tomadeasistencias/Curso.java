@@ -1,5 +1,6 @@
 package com.example.tomadeasistencias;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
@@ -8,14 +9,14 @@ public class Curso {
     private Character Division;
     private String Observaciones;
     private Integer Ciclo;
-    private List <Alumno> alumno;
+    private ArrayList <Alumno> alumno;
 
-    public Curso(String nombre, Character division, String observaciones, Integer ciclo, List<Alumno> alumno) {
+    public Curso(String nombre, Character division, String observaciones, Integer ciclo) {
         this.Nombre = nombre;
         this.Division = division;
         this.Observaciones = observaciones;
         this.Ciclo = ciclo;
-        this.alumno = alumno;
+        alumno = new ArrayList<Alumno>();
     }
 
     public String getNombre() {
@@ -61,7 +62,7 @@ public class Curso {
         this.alumno.remove(alumno);
     }
 
-    public List <Alumno> getAllAlumnos (List <Alumno> alumno){
+    public ArrayList <Alumno> getAllAlumnos (){
 
         return alumno;
     }

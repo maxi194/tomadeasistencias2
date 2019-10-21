@@ -3,6 +3,8 @@ package com.example.tomadeasistencias;
 
 import org.junit.Test;
 
+import java.time.Instant;
+import java.util.Date;
 
 
 public class AccesoSistemaTest {
@@ -11,7 +13,9 @@ public class AccesoSistemaTest {
 
     public void SubMain(){
 
-        //AccesoSistema accesosistema1 = new AccesoSistema("maxi94","maxi2019", 14-10-2019, new Rol("Preceptor"));
+        AccesoSistema accesosistema1 = new AccesoSistema("maxi94","maxi2019", Date.from(Instant.now()),new Rol("Preceptor"));
+
+        System.out.println(accesosistema1);
 
     }
 

@@ -1,7 +1,8 @@
 package com.example.tomadeasistencias;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 public class PersonaBase {
 
@@ -13,9 +14,9 @@ public class PersonaBase {
     private String CorreoElectronico;
     private Direccion direccion;
     private Nacionalidad nacionalidad;
-    private List<Telefono> telefonos;
+    private ArrayList<Telefono> telefonos;
 
-    public PersonaBase(String apellido, String nombre, String dni, Date fechaNacimiento, String correoElectronico, Direccion direccion, Nacionalidad nacionalidad, List<Telefono> telefonos) {
+    public PersonaBase(String apellido, String nombre, String dni, Date fechaNacimiento, String correoElectronico, Direccion direccion, Nacionalidad nacionalidad) {
         this.Apellido = apellido;
         this.Nombre = nombre;
         this.Dni = dni;
@@ -23,7 +24,7 @@ public class PersonaBase {
         this.CorreoElectronico = correoElectronico;
         this.direccion = direccion;
         this.nacionalidad = nacionalidad;
-        this.telefonos = telefonos;
+        telefonos = new ArrayList<Telefono>();
     }
 
     public String getApellido() {
@@ -92,8 +93,8 @@ public class PersonaBase {
         return telefonos.get(numero);
     }
 
-    public List <Telefono> getAllTelefonos (List <Telefono> telefonos){
-        return  telefonos;
+    public ArrayList <Telefono> getAllTelefonos (){
+        return telefonos;
     }
 
     public void removeTelefono (Telefono telefono){

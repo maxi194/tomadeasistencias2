@@ -1,15 +1,16 @@
 package com.example.tomadeasistencias;
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 public class ControlReincorporaciones {
 
    private Integer Ciclo;
-   private List <Reincorporacion> reincorporaciones;
+   private ArrayList<Reincorporacion> reincorporaciones;
 
-    public ControlReincorporaciones(Integer ciclo, List<Reincorporacion> reincorporaciones) {
+    public ControlReincorporaciones(Integer ciclo) {
         this.Ciclo = ciclo;
-        this.reincorporaciones = reincorporaciones;
+        reincorporaciones = new ArrayList<Reincorporacion>();
     }
 
     public Integer getCiclo() {
@@ -26,11 +27,9 @@ public class ControlReincorporaciones {
     }
 
 
+    public ArrayList <Reincorporacion> getAllReincorporaciones (){
 
-
-    public List <Reincorporacion> getAllReincorporaciones (List <Reincorporacion> reincorporacion){
-
-        return reincorporacion;
+        return reincorporaciones;
     }
 
     @Override
