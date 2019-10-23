@@ -4,14 +4,14 @@ import java.text.DecimalFormat;
 
 public class Inasistencia {
 
-    private DecimalFormat Cantidad;
+    private Double Cantidad;
     private Character Justificado;
     private String Observaciones;
     private Alumno alumno;
     private ParteDiario parteDiario;
 
 
-    public Inasistencia(DecimalFormat cantidad, Character justificado, String observaciones, Alumno alumno, ParteDiario parteDiario) {
+    public Inasistencia(Double cantidad, Character justificado, String observaciones, Alumno alumno, ParteDiario parteDiario) {
         this.Cantidad = cantidad;
         this.Justificado = justificado;
         this.Observaciones = observaciones;
@@ -19,11 +19,11 @@ public class Inasistencia {
         this.parteDiario = parteDiario;
     }
 
-    public DecimalFormat getCantidad() {
+    public Double getCantidad() {
         return Cantidad;
     }
 
-    public void setCantidad(DecimalFormat cantidad) {
+    public void setCantidad(Double cantidad) {
         Cantidad = cantidad;
     }
 

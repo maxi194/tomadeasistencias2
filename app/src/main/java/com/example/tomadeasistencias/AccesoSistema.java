@@ -6,10 +6,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
+
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
+
 
 
 public class AccesoSistema extends Activity {

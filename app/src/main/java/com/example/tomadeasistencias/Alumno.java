@@ -13,7 +13,7 @@ public class Alumno extends PersonaBase {
 
     public Alumno(String apellido, String nombre, String dni, Date fechaNacimiento, String correoElectronico, Direccion direccion, Nacionalidad nacionalidad, String genero) {
         super(apellido, nombre, dni, fechaNacimiento, correoElectronico, direccion, nacionalidad);
-        Genero = genero;
+        this.Genero = genero;
         reincorporaciones = new ArrayList<Reincorporacion>();
         inasistencias = new ArrayList<Inasistencia>();
 
@@ -39,7 +39,7 @@ public class Alumno extends PersonaBase {
         reincorporaciones.remove(reincorporacion);
     }
 
-    public List <Reincorporacion> getAllReincorporaciones (List <Reincorporacion> reincorporacion){
+    public ArrayList <Reincorporacion> getAllReincorporaciones (){
 
         return reincorporaciones;
     }
@@ -55,7 +55,7 @@ public class Alumno extends PersonaBase {
 
     }
 
-    public List <Inasistencia> getAllInasistencias (List <Inasistencia> inasistencia){
+    public ArrayList <Inasistencia> getAllInasistencias (){
 
         return inasistencias;
     }
