@@ -7,7 +7,7 @@ import java.util.Date;
 public class PersonaBase {
 
 
-    private String  Apellido;
+    private String Apellido;
     private String Nombre;
     private String Dni;
     private Date FechaNacimiento;
@@ -31,7 +31,14 @@ public class PersonaBase {
         return Apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void setApellido(String apellido) throws IllegalArgumentException {
+
+        if (apellido == ""){
+
+            throw new IllegalArgumentException("El apellido no puede quedar vacio");
+
+        }
+
         Apellido = apellido;
     }
 
@@ -39,7 +46,14 @@ public class PersonaBase {
         return Nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) throws IllegalArgumentException {
+
+        if (nombre == "") {
+
+            throw new IllegalArgumentException("El nombre no puede quedar vacio");
+
+        }
+
         Nombre = nombre;
     }
 
@@ -47,7 +61,11 @@ public class PersonaBase {
         return Dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(String dni) throws IllegalArgumentException {
+        if (dni == "") {
+
+            throw new IllegalArgumentException("El DNI no puede quedar vacio");
+        }
         Dni = dni;
     }
 
@@ -102,17 +120,17 @@ public class PersonaBase {
         telefonos.remove(telefono);
     }
 
+
     @Override
     public String toString() {
-        return "PersonaBase{" +
-                "Apellido='" + Apellido + '\'' +
-                ", Nombre='" + Nombre + '\'' +
-                ", Dni='" + Dni + '\'' +
-                ", FechaNacimiento=" + FechaNacimiento +
-                ", CorreoElectronico='" + CorreoElectronico + '\'' +
-                ", direccion=" + direccion +
-                ", nacionalidad=" + nacionalidad +
-                ", telefonos=" + telefonos +
-                '}';
+        return   "Apellido ='" + Apellido + '\'' +
+                ", Nombre ='" + Nombre + '\'' +
+                ", Dni ='" + Dni + '\'' +
+                ", Fecha de Nacimiento =" + FechaNacimiento +
+                ", su correo electronico es ='" + CorreoElectronico + '\'' +
+                ", vive en =" + direccion +
+                ", su nacionalidad es =" + nacionalidad +
+                ", telefonos=" + telefonos
+                ;
     }
 }

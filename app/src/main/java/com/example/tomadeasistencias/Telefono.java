@@ -25,7 +25,12 @@ private String Tipo;
         return Numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(String numero) throws IllegalArgumentException{
+
+        if (numero == ""){
+
+            throw new IllegalArgumentException("El numero no puede quedar vacio");
+        }
         Numero = numero;
     }
 

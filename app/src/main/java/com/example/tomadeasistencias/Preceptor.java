@@ -19,7 +19,12 @@ public class Preceptor extends PersonaBase {
         return Legajo;
     }
 
-    public void setLegajo(String legajo) {
+    public void setLegajo(String legajo) throws IllegalArgumentException{
+
+        if (legajo == "") {
+
+            throw new IllegalArgumentException("El legajo no puede quedar vacio");
+        }
         Legajo = legajo;
     }
 
@@ -35,7 +40,7 @@ public class Preceptor extends PersonaBase {
 
     @Override
     public String toString() {
-        return "Preceptor{" +
+        return "Preceptor{" + super.toString() +
                 "Legajo='" + Legajo + '\'' +
                 ", accesoSistemas=" + accesoSistemas +
                 '}';

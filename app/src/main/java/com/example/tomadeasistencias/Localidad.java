@@ -41,9 +41,9 @@ public class Localidad {
     @Override
     public String toString() {
         return "Localidad{" +
-                "Nombre='" + Nombre + '\'' +
-                ", NombreResumido='" + NombreResumido + '\'' +
-                ", CodigoPostal='" + CodigoPostal + '\'' +
+                "El nombre de la localidad es = '" + Nombre + '\'' +
+                ", Su nombre resumido es = '" + NombreResumido + '\'' +
+                ", El codigo postal es = '" + CodigoPostal + '\'' +
                 '}';
     }
 }

@@ -17,7 +17,19 @@ public class AccesoSistemaTest {
 
         System.out.println(accesosistema1);
 
+        try {
+
+            AccesoSistema accesosistema2 = new AccesoSistema("","pp22",Date.from(Instant.now()),new Rol("Preceptor"));
+
+             System.out.println(accesosistema2);
+        } catch (IllegalArgumentException e){
+
+            System.out.println("Error: " + e.getMessage());
+        }
+
+
     }
+
 
 
 }

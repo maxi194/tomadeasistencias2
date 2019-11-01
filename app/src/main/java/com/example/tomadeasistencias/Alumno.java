@@ -62,8 +62,8 @@ public class Alumno extends PersonaBase {
 
     @Override
     public String toString() {
-        return "Alumno{" +
-                "Genero='" + Genero + '\'' +
+        return "Alumno{" + super.toString() +
+                "Su genero es ='" + Genero + '\'' +
                 '}';
     }
 }

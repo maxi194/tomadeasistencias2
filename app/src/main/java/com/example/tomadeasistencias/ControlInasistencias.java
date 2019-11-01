@@ -18,7 +18,14 @@ public class ControlInasistencias {
         return Ciclo;
     }
 
-    public void setCiclo(Integer ciclo) {
+    public void setCiclo(Integer ciclo) throws IllegalArgumentException {
+
+        if (ciclo == 0) {
+
+            throw new IllegalArgumentException("El ciclo no puede ser cero");
+        }
+
+
         Ciclo = ciclo;
     }
 
@@ -40,8 +47,8 @@ public class ControlInasistencias {
 
     @Override
     public String toString() {
-        return "ControlInasistencias{" +
-                "Ciclo=" + Ciclo +
-                '}';
+        return "Control de Inasistencias " +
+                "Ciclo=" + Ciclo
+                ;
     }
 }

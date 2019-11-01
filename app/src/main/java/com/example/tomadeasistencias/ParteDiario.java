@@ -61,13 +61,13 @@ public class ParteDiario {
         return inasistencias;
     }
 
-
     @Override
     public String toString() {
         return "ParteDiario{" +
                 "Fecha=" + Fecha +
                 ", Detalle='" + Detalle + '\'' +
                 ", Observaciones='" + Observaciones + '\'' +
+                ", curso=" + curso +
                 '}';
     }
 }

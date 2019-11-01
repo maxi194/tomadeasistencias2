@@ -23,7 +23,7 @@ public class AlumnoTest {
         alumno1.addInasistencia(inasistencia);
         alumno1.addReincorporacion(reincorporacion1);
 
-        System.out.println(alumno1.getApellido());
+        System.out.println(alumno1);
         System.out.println(alumno1.getNombre());
         System.out.println(alumno1.getFechaNacimiento());
 

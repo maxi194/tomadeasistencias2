@@ -15,6 +15,12 @@ public class Turno {
     }
 
     public void setNombre(String nombre) {
+
+        if(this.Nombre == null){
+
+            throw new NullPointerException("El nombree no puede quedar nulo");
+        }
+
         Nombre = nombre;
     }
 

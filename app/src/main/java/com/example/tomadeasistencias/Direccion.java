@@ -89,7 +89,7 @@ public class Direccion {
 
     @Override
     public String toString() {
-        return "Direccion{" +
+        return "{" +
                 "Barrio='" + Barrio + '\'' +
                 ", Calle='" + Calle + '\'' +
                 ", Numero='" + Numero + '\'' +

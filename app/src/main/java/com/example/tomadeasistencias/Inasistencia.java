@@ -23,7 +23,14 @@ public class Inasistencia {
         return Cantidad;
     }
 
-    public void setCantidad(Double cantidad) {
+    public void setCantidad(Double cantidad) throws IllegalArgumentException{
+
+if (cantidad == 0.0) {
+
+        throw new IllegalArgumentException("No se puede poner cero");
+
+}
+
         Cantidad = cantidad;
     }
 

@@ -24,6 +24,9 @@ public class Curso {
     }
 
     public void setNombre(String nombre) {
+
+
+
         Nombre = nombre;
     }
 

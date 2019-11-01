@@ -38,7 +38,14 @@ public class AccesoSistema extends Activity {
         return Usuario;
     }
 
-    public void setUsuario(String usuario) {
+    public void setUsuario(String usuario) throws IllegalArgumentException {
+
+        if (usuario == "") {
+
+            throw new IllegalArgumentException("El usuario no puede ser vacio");
+
+        }
+
         Usuario = usuario;
     }
 
@@ -46,7 +53,14 @@ public class AccesoSistema extends Activity {
         return Contraseña;
     }
 
-    public void setContraseña(String contraseña) {
+    public void setContraseña(String contraseña) throws IllegalArgumentException{
+
+
+        if(contraseña == "") {
+
+            throw new IllegalArgumentException("La contraseña no puede ser vacio");
+        }
+
         Contraseña = contraseña;
     }
 
@@ -78,10 +92,10 @@ public class AccesoSistema extends Activity {
     @Override
     public String toString() {
         return "AccesoSistema{" +
-                "Usuario='" + Usuario + '\'' +
-                ", Contraseña='" + Contraseña + '\'' +
-                ", Fecha_Hora=" + Fecha_Hora +
-                ", rol=" + rol +
+                "Nombre de usuario='" + Usuario + '\'' +
+                ", Su contraseña='" + Contraseña + '\'' +
+                ", Fecha y hora de logueo=" + Fecha_Hora +
+                ", El rol es=" + rol +
                 '}';
     }
 }
